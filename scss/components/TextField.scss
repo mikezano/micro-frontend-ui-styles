@@ -1,0 +1,54 @@
+.text-field {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  --size: 2rem;
+
+  &__input,
+  &__clear {
+    height: var(--size);
+    border: 0.1rem solid var(--zano-gray);
+  }
+  &__input {
+    padding: var(--zano-padding) var(--size) var(--zano-padding)
+      var(--zano-padding);
+
+    font-size: 1rem;
+  }
+
+  &__clear {
+    margin-left: calc(-1 * var(--size));
+    width: var(--size);
+    transform: translateX(var(--size));
+    transition: transform 0.2s ease;
+  }
+
+  &__clear:hover {
+    background-color: var(--zano-gray-light2);
+    cursor: pointer;
+  }
+  &__clear--show {
+    animation: move-in 0.2s ease forwards;
+  }
+  &__clear--hide {
+    animation: move-out 0.2s ease;
+  }
+
+  @keyframes move-in {
+    from {
+      transform: translateX(var(--size));
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes move-out {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(var(--size));
+    }
+  }
+}
