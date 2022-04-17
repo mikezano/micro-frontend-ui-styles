@@ -6,6 +6,7 @@
 
   &__sidebar {
     position: absolute;
+    z-index: 1;
     height: inherit;
     background-color: hsla(0, 100%, 100%, 0.95);
     width: 16rem;

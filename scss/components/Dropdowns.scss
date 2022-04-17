@@ -1,0 +1,61 @@
+@mixin dropdown {
+  border: 1px solid var(--zano-gray);
+  position: relative;
+
+  &__selected-item {
+    display: flex;
+    padding: 4px;
+  }
+
+  &__selected-text {
+    margin-right: auto;
+  }
+
+  &__caret {
+    margin-left: 1rem;
+  }
+
+  &__list {
+    position: absolute;
+    z-index: 10;
+    min-width: 100%;
+    border: 1px solid var(--zano-gray);
+    border-top: none;
+    padding: 0;
+    margin: 1px 0 0 0;
+    background-color: white;
+  }
+  &__list-item {
+    list-style-type: none;
+    padding: 0.2rem 0.4rem;
+  }
+  &__selected-item:hover,
+  &__list-item:hover {
+    background-color: var(--zano-gray-light1);
+    cursor: hover;
+  }
+}
+
+.dropdown {
+  @include dropdown;
+}
+.dropdown-checkbox {
+  @include dropdown;
+
+  &__list-item {
+    display: flex;
+    align-items: center;
+    padding: 0;
+  }
+  &__checkbox {
+    margin-left: 0.4rem;
+  }
+  &__checkbox-label:hover {
+    cursor: pointer;
+  }
+  &__checkbox-label {
+    flex: 1;
+
+    padding: 0.2rem 0.4rem 0.2rem 0;
+  }
+}

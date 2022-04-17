@@ -15,7 +15,16 @@
   }
   &__header,
   &__description {
-    padding: 0.5rem 1rem;
+    padding: 1rem;
     margin: 0;
+  }
+
+  &__header {
+    font-size: 2rem;
+    padding-bottom: 0.5rem;
+  }
+  &__description {
+    font-size: 1rem;
+    padding-top: 0.5rem;
   }
 }

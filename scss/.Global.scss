@@ -9,6 +9,7 @@
 
   --zano-navbar-height: 2rem;
 
+  --zano-font-family: "VT323", monospace;
   --zano-font-size: 2rem;
 
   --zano-padding-sm: 0.4rem;
@@ -34,11 +35,9 @@ body {
   margin: 0;
 }
 
-.hello-world {
-  width: 500px;
-  height: 500px;
-
-  border: 1px solid var(--zano-gray);
+input,
+button {
+  font-family: var(--zano-font-family);
 }
 
 .framework-icon {
@@ -52,11 +51,13 @@ body {
   color: white;
 }
 
-@import "./components/Dropdown.scss";
+@import "./components/Dropdowns.scss";
 @import "./components/Card.scss";
 @import "./components/Navbar.scss";
 @import "./components/Sidebar.scss";
 @import "./components/LayoutSidebarMain.scss";
 @import "./components/Components.scss";
-@import "./components/TextField.scss";
-@import "./components/TextFieldSearchAhead.scss";
+@import "./components/TextFields.scss";
+
+//Templates
+@import "./templates/Fruit.scss";

@@ -1,0 +1,9 @@
+.fruit {
+  display: flex;
+  align-items: center;
+  &__icon {
+  }
+  &__name {
+    flex: 1;
+  }
+}

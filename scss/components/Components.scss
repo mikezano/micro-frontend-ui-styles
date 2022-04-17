@@ -1,6 +1,8 @@
 .components {
   &__title {
     text-align: center;
+    font-size: 4rem;
+    margin: 1rem;
   }
   &__examples {
     padding: var(--zano-padding);
