@@ -1,8 +1,8 @@
 const { merge } = require("webpack-merge");
-//const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
+const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
 //const HtmlWebpackPlugin = require("html-webpack-plugin");
 const commonConfig = require("./webpack.common");
-//const packageJson = require("../package.json");
+const packageJson = require("../package.json");
 
 //const domain = process.env.PRODUCTION_DOMAIN;
 
@@ -17,7 +17,20 @@ const prodConfig = {
   //   filename: "[name].[contenthash].js",
   //   publicPath: "/StylesApp/latest/",
   // },
-
+  output: {
+    filename: "[name].[contenthash].js",
+    publicPath: "/helloStyles/latest/",
+  },
+  plugins: [
+    new ModuleFederationPlugin({
+      name: "styles",
+      filename: "remoteEntry.js",
+      exposes: {
+        "./StylesApp": "./src/bootstrap",
+      },
+      shared: packageJson.dependencies,
+    }),
+  ],
   // plugins: [
   //   new ModuleFederationPlugin({
   //     name: "styles",
