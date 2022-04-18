@@ -19,7 +19,7 @@ const prodConfig = {
   // },
   output: {
     filename: "[name].[contenthash].js",
-    publicPath: "/helloStyles/latest/",
+    publicPath: "/StylesApp/latest/",
   },
   plugins: [
     new ModuleFederationPlugin({
