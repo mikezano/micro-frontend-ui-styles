@@ -1,0 +1,20 @@
+.table {
+  background-color: white;
+  //border: 1px solid black;
+
+  &__columns {
+    background-color: white;
+  }
+  &__cell {
+    padding: 0.2rem 0.5rem;
+  }
+  &__column {
+    border-bottom: 0.1rem solid black;
+  }
+  // &__rows {
+  //   background-color: white;
+  // }
+  //&__row {
+  //background-color: orange;
+  //}
+}

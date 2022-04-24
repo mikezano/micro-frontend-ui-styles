@@ -1,0 +1,19 @@
+.toggles {
+  &__option {
+    cursor: pointer;
+    border-radius: 0;
+  }
+  &__option:hover {
+    background-color: var(--zano-gray-light1);
+  }
+  &__option:active {
+    background-color: var(--zano-gray-light2);
+  }
+
+  &__option:not(:first-child) {
+    border-left: none;
+  }
+  &__option--active {
+    background-color: var(--zano-gray-light1);
+  }
+}

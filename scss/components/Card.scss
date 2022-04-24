@@ -1,10 +1,8 @@
 .card {
-  border: 1px solid var(--zano-gray-light1);
-
+  border: 0.1rem solid var(--zano-gray-light1);
+  box-shadow: var(--zano-shadow);
   margin: 1rem;
   padding: 0;
-
-  box-shadow: var(--zano-shadow);
 
   &__body {
     background: var(--zano-gray-light2);
