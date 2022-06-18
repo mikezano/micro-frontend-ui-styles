@@ -1,15 +1,17 @@
 .table {
   background-color: white;
+  border-collapse: collapse;
   //border: 1px solid black;
 
   &__columns {
     background-color: white;
   }
   &__cell {
-    padding: 0.2rem 0.5rem;
+    padding: 0.2rem 1rem;
   }
   &__column {
     border-bottom: 0.1rem solid black;
+    padding: 0.5rem 1rem;
   }
   // &__rows {
   //   background-color: white;
